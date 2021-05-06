@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.8b854a05.chunk.css",
-    "main.js": "/static/js/main.8556fb28.chunk.js",
-    "main.js.map": "/static/js/main.8556fb28.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.083b2134.js",
-    "runtime-main.js.map": "/static/js/runtime-main.083b2134.js.map",
-    "static/js/2.93e7df19.chunk.js": "/static/js/2.93e7df19.chunk.js",
-    "static/js/2.93e7df19.chunk.js.map": "/static/js/2.93e7df19.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.8b854a05.chunk.css.map": "/static/css/main.8b854a05.chunk.css.map",
-    "static/js/2.93e7df19.chunk.js.LICENSE.txt": "/static/js/2.93e7df19.chunk.js.LICENSE.txt"
+    "main.css": "/mysql2ts/static/css/main.8b854a05.chunk.css",
+    "main.js": "/mysql2ts/static/js/main.8556fb28.chunk.js",
+    "main.js.map": "/mysql2ts/static/js/main.8556fb28.chunk.js.map",
+    "runtime-main.js": "/mysql2ts/static/js/runtime-main.4c2b22ab.js",
+    "runtime-main.js.map": "/mysql2ts/static/js/runtime-main.4c2b22ab.js.map",
+    "static/js/2.93e7df19.chunk.js": "/mysql2ts/static/js/2.93e7df19.chunk.js",
+    "static/js/2.93e7df19.chunk.js.map": "/mysql2ts/static/js/2.93e7df19.chunk.js.map",
+    "index.html": "/mysql2ts/index.html",
+    "static/css/main.8b854a05.chunk.css.map": "/mysql2ts/static/css/main.8b854a05.chunk.css.map",
+    "static/js/2.93e7df19.chunk.js.LICENSE.txt": "/mysql2ts/static/js/2.93e7df19.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.083b2134.js",
+    "static/js/runtime-main.4c2b22ab.js",
     "static/js/2.93e7df19.chunk.js",
     "static/css/main.8b854a05.chunk.css",
     "static/js/main.8556fb28.chunk.js"
