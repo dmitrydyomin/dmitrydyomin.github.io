@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Coffee machine cleaning timer</title>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background-color: #34495e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Inter var', ui-sans-serif, system-ui, -apple-system,
+          system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+          sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+        font-size: 15vw;
+        font-variant-numeric: tabular-nums;
+        color: white;
+      }
+      #time {
+        width: 2em;
+        padding-right: 0.7em;
+        text-align: right;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="iteration"></div>
+    <div id="time">run</div>
+  </body>
+  <script type="text/javascript">
+    const t0 = Date.now();
+    const iter = document.getElementById('iteration');
+    const time = document.getElementById('time');
+    let phase = undefined;
+
+    const beep = (state) => {
+      // TODO: implement beep
+    };
+
+    function draw() {
+      const t = Date.now() - t0;
+      const iteration = Math.floor(t / 15000);
+      const ms = t - iteration * 15000;
+      const phaseOne = ms < 5000;
+
+      if (phase !== phaseOne) {
+        phase = phaseOne;
+        beep(phase);
+      }
+
+      const timerTime = phaseOne ? 5000 - ms : 15000 - ms;
+
+      iter.innerText = `${iteration + 1}:`;
+      time.innerText = (timerTime / 1000).toFixed(1);
+      document.body.style.backgroundColor = phaseOne ? '#e74c3c' : '#27ae60';
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const l = time.addEventListener('click', () => {
+        setInterval(() => {
+          draw();
+        }, 100);
+        time.removeEventListener('click', l);
+        time.style.cursor = 'text';
+      });
+    });
+  </script>
+</html>
