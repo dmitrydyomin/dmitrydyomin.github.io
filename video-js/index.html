@@ -1,0 +1,43 @@
+<head>
+  <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+</head>
+
+<body>
+  <video-js
+    id="my-video"
+    width="600"
+    height="300"
+    class="vjs-default-skin"
+    controls
+  >
+  </video-js>
+
+  <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@videojs/http-streaming@2.11.0/dist/videojs-http-streaming.min.js"
+    integrity="sha256-99KEzta7jg5D13BT0GTk4jggXevKTkQwnqAR87ShkVc="
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    const query = new URLSearchParams(document.location.search);
+    const hls = query.get('hls');
+    const t = query.get('t');
+
+    if (hls) {
+      const v = document.querySelector('video-js');
+      const s = document.createElement('source');
+      s.setAttribute('src', hls);
+      s.setAttribute('type', 'application/x-mpegURL');
+      v.appendChild(s);
+    }
+
+    const player = videojs('my-video');
+
+    if (t) {
+      player.currentTime(t);
+    }
+  </script>
+</body>
