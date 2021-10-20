@@ -33,6 +33,7 @@
     <div id="time">run</div>
   </body>
   <script type="text/javascript">
+    let t0;
     const iter = document.getElementById('iteration');
     const time = document.getElementById('time');
     let phase = undefined;
@@ -61,7 +62,7 @@
 
     window.addEventListener('DOMContentLoaded', (event) => {
       const l = time.addEventListener('click', () => {
-        const t0 = Date.now();
+        t0 = Date.now();
         setInterval(() => {
           draw();
         }, 100);
